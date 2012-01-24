@@ -59,6 +59,13 @@ article{
 		img{
 			max-width: 100%;
 			height: auto;
+			& + .caption{
+				background: image-url('caption.png') 0 4px no-repeat;
+				display: block;
+				font-size: 12px;
+				color: #999;
+				padding-left: 25px;
+			}
 		}
 		blockquote{
 			background: $border;
