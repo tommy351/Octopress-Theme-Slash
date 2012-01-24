@@ -44,6 +44,24 @@ $pre-border: darken($base02, 5) !default;
 $pre-color: $base1 !default;
 
 figure.code{
+	background: $border;
+	padding: 5px 15px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow-x: auto;
+	.line-numbers{
+		border-right: 1px solid #ccc;
+		color: #000;
+		font-family: $monospace;
+		padding-right: 15px;
+	}
+	td.code{
+		padding-left: 15px;
+		font-size: 13px;
+		overflow-x: auto;
+	}
+	/* Style */
 	.c {
 		color:$base01 !important;
 		font-style: italic !important;
