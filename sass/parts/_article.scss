@@ -118,6 +118,18 @@ article{
 				color: $font-main;
 			}
 		}
+		.date, .tags, .comments{
+			padding-left: 30px;
+		}
+		.date{
+			background: image-url('date.png') 0 center no-repeat;
+		}
+		.tags{
+			background: image-url('tags.png') 0 center no-repeat;
+		}
+		.comments{
+			background: image-url('comments.png') 0 center no-repeat;
+		}
 	}
 }
 .share{
