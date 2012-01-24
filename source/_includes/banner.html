@@ -1,7 +1,15 @@
+{% if site.twitter_user %}
 <div id="banner" class="inner">
 	<div class="container">
 		<ul class="feed"></ul>
 	</div>
-	<small><a href="http://twitter.com/tommy351">tommy351</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<small><a href="http://twitter.com/{{ site.twitter_user }}">{{ site.twitter_user }}</a> @ <a href="http://twitter.com">Twitter</a></small>
 	<div class="loading">載入中...</div>
 </div>
+<script src="{{ root_url }}/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('{{ site.twitter_user }}', {{ site.twitter_tweet_count }});
+	})(jQuery);
+</script>
+{% endif %}

@@ -3,12 +3,12 @@
     <div class="entry">
         {{ content | excerpt }}
         {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-        {% if excerpted == 'true' %}<a href="{{ root_url }}{{ post.url }}" class="more-link">閱讀全文</a>{% endif %}
+        {% if excerpted == 'true' %}<a href="{{ root_url }}{{ post.url }}" class="more-link">{{ site.excerpt_link }}</a>{% endif %}
     </div>
     <div class="meta">
         <div class="date">{% include post/date.html %}{{ time }}</div>
         <div class="tags">{% include post/categories.html %}</div>
-        {% if site.disqus_short_name and post.comments == true %}
+        {% if site.disqus_short_name and post.comments == true and site.disqus_show_comment_count == true %}
         <div class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">留言</a></div>
         {% endif %}
     </div>
@@ -18,7 +18,7 @@
     <div class="meta">
         <div class="date">{% include post/date.html %}{{ time }}</div>
         <div class="tags">{% include post/categories.html %}</div>
-        {% if site.disqus_short_name and page.comments == true %}
+        {% if site.disqus_short_name and page.comments == true and site.disqus_show_comment_count == true %}
         <div class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">留言</a></div>
         {% endif %}
     </div>
