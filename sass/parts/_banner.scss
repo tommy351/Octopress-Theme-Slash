@@ -1,6 +1,5 @@
 #banner{
-	border-top: 1px solid $light-shadow;
-	border-bottom: 1px solid $border;
 	color: $font-main;
 	padding: 30px 0;
+	@include border-shadow();
 }

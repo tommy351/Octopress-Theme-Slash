@@ -11,6 +11,10 @@ $max-width: 1000px;
 	-o-user-select: $select;
 	user-select: $select;
 }
+@mixin border-shadow($top: #fff, $bottom: #ddd){
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+}
 
 *{
 	margin: 0;

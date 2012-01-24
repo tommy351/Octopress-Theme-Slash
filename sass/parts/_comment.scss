@@ -1,7 +1,6 @@
 #comment{
 	padding: 30px 0;
-	border-top: 1px solid $light-shadow;
-	border-bottom: 1px solid $border;
+	@include border-shadow();
 	h1.title{
 		font-size: 25px;
 		font-weight: 300;
