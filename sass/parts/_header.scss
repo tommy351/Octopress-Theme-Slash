@@ -29,15 +29,17 @@ header{
 	}
 	.search{
 		input[type="text"]{
-			background: #f2f2f2;
+			background: image-url('search.png') 10px center no-repeat #f2f2f2;
 			color: #999;
 			border: 1px solid $border;
 			@include border-radius(15px);
 			font: 13px $default;
-			padding: 6px 15px;
+			padding: 6px 15px 6px 35px;
+			width: 100px;
 			@include transition(0.3s);
 			&:focus, &:active{
-				background: #fff;
+				background: image-url('search.png') 10px center no-repeat #fff;
+				width: 150px;
 				border-top: 1px solid #ccc;
 				color: $font-main;
 			}
