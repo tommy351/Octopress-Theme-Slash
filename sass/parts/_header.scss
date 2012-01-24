@@ -17,10 +17,8 @@ header{
 	nav{
 		margin-left: 30px;
 		>ul{
-			list-style: none;
-			padding-right: 30px;
 			>li{
-				float: left;
+				display: inline-block;
 				margin-left: 50px;
 				position: relative;
 				&:hover{
@@ -138,6 +136,55 @@ header{
 				border: 1px solid #EF7522;
 				&:hover{
 					border: 1px solid darken(#EF7522, 10%);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1030px){
+	header{
+		height: auto;
+		position: relative;
+		padding-bottom: 10px;
+		h1{
+			float: none !important;
+		}
+		nav{
+			margin-left: 0;
+			margin-top: 15px;
+			float: none !important;
+			>ul{
+				>li{
+					margin-left: 0;
+					margin-right: 50px;
+					&:last-of-type{
+						margin-right: 0;
+					}
+				}
+				ul{
+					top: 40px;
+				}
+			}
+		}
+		>.right{
+			position: absolute;
+			top: 30px;
+			right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 600px){
+	header{
+		.social{
+			display: none;
+		}
+		.search{
+			input[type="text"]{
+				width: 60px;
+				&:focus, &:active{
+					width: 100px;
 				}
 			}
 		}

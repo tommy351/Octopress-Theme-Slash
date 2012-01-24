@@ -50,39 +50,41 @@
 		}
 	}
 
-	banner.show();
+	if ($(window).width() > 600){
+		banner.show();
 
-	$.getJSON('http://twitter.com/status/user_timeline/tommy351.json?count=10&callback=?', function(json){
-		var length = json.length,
-			fragment = document.createDocumentFragment(),
-			counts = 0,
-			timeout;
+		$.getJSON('http://twitter.com/status/user_timeline/tommy351.json?count=10&callback=?', function(json){
+			var length = json.length,
+				fragment = document.createDocumentFragment(),
+				counts = 0,
+				timeout;
 
-		for (var i=0; i<length; i++){
-			var item = document.createElement('li');
-			item.innerHTML = linkify(json[i].text) + '<small>'+relativeDate(json[i].created_at)+'</small>';
-			fragment.appendChild(item);
-		}
+			for (var i=0; i<length; i++){
+				var item = document.createElement('li');
+				item.innerHTML = linkify(json[i].text) + '<small>'+relativeDate(json[i].created_at)+'</small>';
+				fragment.appendChild(item);
+			}
 
-		var play = function(){
-			timeout = setTimeout(function(){
-				feed.animate({top: '-='+30}, speed, function(){
-					$(this).append($(this).children().eq(counts).clone());
-					counts++;
-					play();
-				});
-			}, interval);
-		}
+			var play = function(){
+				timeout = setTimeout(function(){
+					feed.animate({top: '-='+30}, speed, function(){
+						$(this).append($(this).children().eq(counts).clone());
+						counts++;
+						play();
+					});
+				}, interval);
+			}
 
-		var pause = function(){
-			clearTimeout(timeout);
-		}
+			var pause = function(){
+				clearTimeout(timeout);
+			}
 
-		banner.on('mouseenter', pause).on('mouseleave', play)
-		.children('.loading').hide().end()
-		.children('.container').show()
-		.children('.feed').append(fragment);
+			banner.on('mouseenter', pause).on('mouseleave', play)
+			.children('.loading').hide().end()
+			.children('.container').show()
+			.children('.feed').append(fragment);
 
-		play();
-	});
+			play();
+		});
+	}
 })(jQuery);

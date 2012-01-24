@@ -30,3 +30,20 @@
 		}
 	}
 }
+
+@media screen and (max-width: 800px){
+	.post{
+		h1.title, .entry{
+			margin-left: 0;
+		}
+		.meta{
+			margin-top: 15px;
+			position: static;
+			width: auto;
+			.date, .tags, .comments{
+				display: inline-block;
+				margin-right: 30px;
+			}
+		}
+	}
+}
