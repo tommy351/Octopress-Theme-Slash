@@ -23,6 +23,11 @@ header{
 				float: left;
 				margin-left: 50px;
 				position: relative;
+				&:hover{
+					>a{
+						color: $main;
+					}
+				}
 				>a{
 					padding: 35px 30px 35px 0;
 					margin-top: -35px;
