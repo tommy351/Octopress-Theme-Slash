@@ -3,14 +3,8 @@ layout: default
 single: true
 ---
 
-<section id="main_col" class="left">
-    <article class="post">{% include article.html %}</article>
-    <section id="comments">
-        <h3>留言</h3>
-        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-    </section>
+<article class="post">{% include article.html %}</article>
+<section id="comments">
+    <h3>留言</h3>
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
 </section>
-{% unless page.sidebar == false %}
-{% include asides.html %}
-{% endunless %}
-<div class="clear"></div>
