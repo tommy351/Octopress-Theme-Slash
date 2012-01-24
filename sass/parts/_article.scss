@@ -63,6 +63,10 @@ article{
 		h3{
 			margin-top: 10px;
 		}
+		img{
+			max-width: 100%;
+			height: auto;
+		}
 		code{
 			font-family: $monospace;
 		}
@@ -84,6 +88,7 @@ article{
 			td.code{
 				padding-left: 15px;
 				font-size: 13px;
+				overflow-x: auto;
 			}
 		}
 	}
