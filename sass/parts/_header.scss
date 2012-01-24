@@ -27,8 +27,8 @@ header{
 					}
 				}
 				>a{
-					padding: 35px 30px 35px 0;
-					margin-top: -35px;
+					padding: 38px 30px 38px 0;
+					margin-top: -38px;
 					background: image-url('detail.png') right center no-repeat;
 					&:only-child{
 						padding-right: 0;
@@ -76,6 +76,10 @@ header{
 					}
 				}
 			}
+		}
+		select{
+			display: none;
+			margin-bottom: 10px;
 		}
 	}
 	.search{
@@ -183,6 +187,14 @@ header{
 
 @media screen and (max-width: 600px){
 	header{
+		nav{
+			>ul{
+				display: none;
+			}
+			select{
+				display: block;
+			}
+		}
 		.social{
 			display: none;
 		}
