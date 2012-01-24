@@ -2,4 +2,31 @@
 	h1.title, .entry{
 		margin-left: 200px;
 	}
+	.meta{
+		position: absolute;
+		top: 85px;
+		line-height: 2;
+		font-size: 13px;
+		color: $font-meta;
+		width: 170px;
+		a{
+			color: $font-meta;
+			@include transition(0.3s);
+			&:hover{
+				color: $font-main;
+			}
+		}
+		.date, .tags, .comments{
+			padding-left: 30px;
+		}
+		.date{
+			background: image-url('date.png') 0 center no-repeat;
+		}
+		.tags{
+			background: image-url('tags.png') 0 center no-repeat;
+		}
+		.comments{
+			background: image-url('comments.png') 0 center no-repeat;
+		}
+	}
 }

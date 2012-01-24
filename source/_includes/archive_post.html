@@ -1,8 +1,9 @@
 {% capture category %}{{ post.categories | size }}{% endcapture %}
-<h1><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h1>
-<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
-{% if category != '0' %}
-<footer>
-  <span class="categories">posted in {{ post.categories | category_links }}</span>
-</footer>
-{% endif %}
+<h1 class="title"><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h1>
+<div class="meta">
+	<span class="date">{{ post.date | date: "%b %e" }}</span>
+	<span class="tags">{% include post/categories.html %}</span>
+    {% if site.disqus_short_name and post.comments == true %}
+    <span class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">留言</a></span>
+    {% endif %}
+</div>
