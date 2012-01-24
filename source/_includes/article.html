@@ -8,7 +8,9 @@
     <div class="meta">
         <div class="date">{% include post/date.html %}{{ time }}</div>
         <div class="tags">{% include post/categories.html %}</div>
+        {% if site.disqus_short_name and post.comments == true %}
         <div class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">留言</a></div>
+        {% endif %}
     </div>
 {% else %}
     <h1 class="title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
@@ -16,6 +18,8 @@
     <div class="meta">
         <div class="date">{% include post/date.html %}{{ time }}</div>
         <div class="tags">{% include post/categories.html %}</div>
+        {% if site.disqus_short_name and page.comments == true %}
         <div class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">留言</a></div>
+        {% endif %}
     </div>
 {% endif %}
