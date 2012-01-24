@@ -76,15 +76,12 @@ article{
 				background: $border;
 				border: 1px solid #ccc;
 				padding: 1px 3px;
-				@include border-radius(5px);
 				margin: 0 3px;
+				@include border-radius(5px);
 			}
 		}
 		code{
-			font-family: $monospace;
-		}
-		pre{
-			line-height: 1.5;
+			font: $meta-size $monospace;
 		}
 		.caption{
 			background: image-url('caption.png') 0 4px no-repeat;

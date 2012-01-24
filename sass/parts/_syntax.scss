@@ -48,15 +48,16 @@ figure.code{
 	padding: 5px 15px;
 	margin-top: 10px;
 	border: 1px solid #ccc;
+	line-height: 1.5;
 	overflow-x: auto;
 	@include border-radius(5px);
 	.line-numbers{
 		border-right: 1px solid #ccc;
 		color: #000;
-		font-family: $monospace;
 		padding-right: 15px;
 	}
 	td.code{
+		width: 100%;
 		padding-left: 15px;
 		overflow-x: auto;
 	}
