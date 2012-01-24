@@ -1,0 +1,75 @@
+article{
+	border-bottom: 1px solid $border;
+	border-top: 1px solid $light-shadow;
+	padding: 30px 0;
+	position: relative;
+	h1.title, .entry{
+		margin-left: 200px;
+	}
+	h1.title{
+		font-size: 25px;
+		font-weight: 300;
+		line-height: 35px;
+		margin-bottom: 20px;
+		a{
+			color: $font-main;
+		}
+	}
+	.entry{
+		line-height: 2;
+		text-align: justify;
+		a{
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		.more-link{
+			display: block;
+			margin-top: 20px;
+		}
+		ol, ul{
+			margin-left: 20px;
+		}
+		p{
+			margin-top: 10px;
+		}
+		h2{
+			font-weight: 300;
+			margin-top: 10px;
+			border-bottom: 1px solid $border;
+			position: relative;
+			&:before{
+				content: "";
+				position: absolute;
+				bottom: -2px;
+				border-bottom: 1px solid $light-shadow;
+				width: 100%;
+			}
+		}
+		h3{
+			margin-top: 10px;
+		}
+		code{
+			font-family: $monospace;
+		}
+		pre{
+			margin-top: 10px;
+			line-height: 1.5;
+		}
+	}
+	.meta{
+		position: absolute;
+		top: 85px;
+		line-height: 2;
+		font-size: 13px;
+		color: $font-meta;
+		width: 170px;
+		a{
+			color: $font-meta;
+			@include transition(0.3s);
+			&:hover{
+				color: $font-main;
+			}
+		}
+	}
+}

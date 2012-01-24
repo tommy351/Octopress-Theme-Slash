@@ -1,0 +1,89 @@
+header{
+	height: 30px;
+	padding: 30px 0;
+	border-bottom: 1px solid $border;
+	line-height: 30px;
+	a{
+		color: $font-main;
+		@include transition(0.3s);
+		&:hover{
+			color: $main;
+		}
+	}
+	h1{
+		font-weight: 300;
+		font-size: 30px;
+	}
+	nav{
+		margin-left: 30px;
+		ul{
+			list-style: none;
+			li{
+				float: left;
+				margin-left: 50px;
+			}
+			ul{
+				display: none;
+			}
+		}
+	}
+	.search{
+		input[type="text"]{
+			background: #f2f2f2;
+			color: #999;
+			border: 1px solid $border;
+			@include border-radius(15px);
+			font: 13px $default;
+			padding: 6px 15px;
+			@include transition(0.3s);
+			&:focus, &:active{
+				background: #fff;
+				border-top: 1px solid #ccc;
+				color: $font-main;
+			}
+		}
+	}
+	.social{
+		margin-right: 15px;
+		a{
+			@include border-radius(50%);
+			display: inline-block;
+			text-indent: -9999px;
+			margin-right: 15px;
+			opacity: 0.5;
+			@include square(28px);
+			@include transition(0.3s);
+			&:hover{
+				opacity: 1;
+			}
+			&:first-of-type{
+				background: #3B5998;
+				border: 1px solid #3B5998;
+				&:hover{
+					border: 1px solid darken(#3B5998, 10%);
+				}
+			}
+			&:nth-of-type(2){
+				background: #C83D20;
+				border: 1px solid #C83D20;
+				&:hover{
+					border: 1px solid darken(#C83D20, 10%);
+				}
+			}
+			&:nth-of-type(3){
+				background: #55CFF8;
+				border: 1px solid #55CFF8;
+				&:hover{
+					border: 1px solid darken(#55CFF8, 10%);
+				}
+			}
+			&:last-of-type{
+				background: #EF7522;
+				border: 1px solid #EF7522;
+				&:hover{
+					border: 1px solid darken(#EF7522, 10%);
+				}
+			}
+		}
+	}
+}

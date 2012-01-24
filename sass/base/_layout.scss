@@ -1,4 +1,4 @@
-$max-width: 1200px;
+$max-width: 1000px;
 
 @mixin square($property){
 	width: $property;
@@ -20,7 +20,8 @@ body{
 	font-family: $default;
 	font-weight: 300;
 	font-size: 14px;
-	background: #333 image-url('random_grey_variations.png');
+	background: $background;
+	color: $font-main;
 }
 h1{
 	font-size: 2em;
