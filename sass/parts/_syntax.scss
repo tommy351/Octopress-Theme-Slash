@@ -48,8 +48,8 @@ figure.code{
 	padding: 5px 15px;
 	margin-top: 10px;
 	border: 1px solid #ccc;
-	border-radius: 5px;
 	overflow-x: auto;
+	@include border-radius(5px);
 	.line-numbers{
 		border-right: 1px solid #ccc;
 		color: #000;

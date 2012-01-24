@@ -44,7 +44,7 @@ header{
 				white-space: nowrap;
 				background: #ddd;
 				border: 1px solid #ccc;
-				border-radius: 0 0 5px 5px;
+				@include border-radius(0 0 5px 5px);
 				box-shadow: 0 4px 8px #DDDDDD;
 				list-style: none;
 				display: none;
@@ -160,6 +160,12 @@ header{
 					margin-right: 50px;
 					&:last-of-type{
 						margin-right: 0;
+					}
+					>a{
+						padding: 15px 30px 15px 0;
+						&:only-child{
+							padding-right: 0;
+						}
 					}
 				}
 				ul{
