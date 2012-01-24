@@ -23,6 +23,10 @@
 		right: 0;
 		bottom: 0;
 	}
+	.loading{
+		background: image-url('loading_pacman.gif') center no-repeat;
+		text-indent: -9999px;
+	}
 	.container{
 		height: 30px;
 		overflow: hidden;
