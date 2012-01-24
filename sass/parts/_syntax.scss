@@ -53,11 +53,20 @@ figure.code{
 	@include border-radius(5px);
 	figcaption{
 		font-size: $meta-size;
-		margin: -10px -15px 0;
-		padding: 10px 15px;
-		@include background(linear-gradient(top, #ccc, #ddd));
+		position: relative;
+		span{
+			margin: -10px -15px 0;
+			padding: 10px 15px 5px;
+			display: block;
+			@include background(linear-gradient(top, #ccc, #ddd));
+			&:empty{
+				display: none;
+			}
+		}
 		a{
-			float: right;
+			position: absolute;
+			top: $meta-size;
+			right: 0;
 		}
 	}
 	.line-numbers{
