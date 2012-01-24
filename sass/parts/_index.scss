@@ -1,2 +1,30 @@
-#content{
+#pagenavi{
+	padding: 20px 0;
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+	@include border-shadow();
+	a{
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.prev, .next{
+		position: absolute;
+	}
+	.prev{
+		background: image-url('back.png') 0 center no-repeat;
+		padding-left: 30px;
+		left: 0;
+	}
+	.next{
+		background: image-url('more.png') right center no-repeat;
+		padding-right: 30px;
+		right: 0;
+	}
+	.center{
+		text-align: center;
+		width: 100%;
+		display: block;
+	}
 }
