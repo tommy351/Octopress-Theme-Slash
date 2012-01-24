@@ -7,16 +7,16 @@
 	</form>
 	<div class="social right">
 		{% if site.facebook_user %}
-		<a href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook">Facebook</a>
+		<a class="facebook" href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook">Facebook</a>
 		{% endif %}
 		{% if site.googleplus_user %}
-		<a href="https://plus.google.com/{{ site.googleplus_user }}" title="Google+">Google+</a>
+		<a class="google" href="https://plus.google.com/{{ site.googleplus_user }}" title="Google+">Google+</a>
 		{% endif %}
 		{% if site.twitter_user %}
-		<a href="http://twitter.com/{{ site.twitter_user }}" title="Twitter">Twitter</a>
+		<a class="twitter" href="http://twitter.com/{{ site.twitter_user }}" title="Twitter">Twitter</a>
 		{% endif %}
 		{% if site.subscribe_rss %}
-		<a href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
+		<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
 		{% endif %}
 	</div>
 </div>

@@ -114,28 +114,28 @@ header{
 			&:hover{
 				opacity: 1;
 			}
-			&:first-of-type{
+			&.facebook{
 				background: image-url('facebook.png') center no-repeat #3B5998;
 				border: 1px solid #3B5998;
 				&:hover{
 					border: 1px solid darken(#3B5998, 10%);
 				}
 			}
-			&:nth-of-type(2){
+			&.google{
 				background: image-url('google.png') center no-repeat #C83D20;
 				border: 1px solid #C83D20;
 				&:hover{
 					border: 1px solid darken(#C83D20, 10%);
 				}
 			}
-			&:nth-of-type(3){
+			&.twitter{
 				background: image-url('twitter.png') center no-repeat #55CFF8;
 				border: 1px solid #55CFF8;
 				&:hover{
 					border: 1px solid darken(#55CFF8, 10%);
 				}
 			}
-			&:last-of-type{
+			&.rss{
 				background: image-url('rss.png') center no-repeat #EF7522;
 				border: 1px solid #EF7522;
 				&:hover{
