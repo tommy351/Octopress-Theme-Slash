@@ -51,6 +51,15 @@ figure.code{
 	line-height: 1.5;
 	overflow-x: auto;
 	@include border-radius(5px);
+	figcaption{
+		font-size: $meta-size;
+		margin: -10px -15px 0;
+		padding: 10px 15px;
+		@include background(linear-gradient(top, #ccc, #ddd));
+		a{
+			float: right;
+		}
+	}
 	.line-numbers{
 		border-right: 1px solid #ccc;
 		color: #000;

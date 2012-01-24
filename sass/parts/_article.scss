@@ -83,6 +83,15 @@ article{
 		code{
 			font: $meta-size $monospace;
 		}
+		>pre{
+			background: $border;
+			padding: 5px 15px;
+			margin-top: 10px;
+			border: 1px solid #ccc;
+			line-height: 1.5;
+			overflow-x: auto;
+			@include border-radius(5px);
+		}
 		.caption{
 			background: image-url('caption.png') 0 4px no-repeat;
 			display: block;
