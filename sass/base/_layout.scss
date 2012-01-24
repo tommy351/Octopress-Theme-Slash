@@ -11,7 +11,7 @@ $max-width: 1000px;
 	-o-user-select: $select;
 	user-select: $select;
 }
-@mixin border-shadow($top: #fff, $bottom: #ddd){
+@mixin border-shadow($top: $gray05, $bottom: $gray04){
 	border-top: 1px solid $top;
 	border-bottom: 1px solid $bottom;
 }
@@ -34,7 +34,7 @@ body{
 	font-weight: 300;
 	font-size: 14px;
 	background: $background;
-	color: $font-main;
+	color: $gray01;
 }
 h1{
 	font-size: 1.8em;

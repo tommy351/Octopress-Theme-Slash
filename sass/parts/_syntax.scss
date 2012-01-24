@@ -44,10 +44,10 @@ $pre-border: darken($base02, 5) !default;
 $pre-color: $base1 !default;
 
 figure.code{
-	background: $border;
+	background: $gray04;
 	padding: 5px 15px;
 	margin-top: 10px;
-	border: 1px solid #ccc;
+	border: 1px solid $gray03;
 	line-height: 1.5;
 	overflow-x: auto;
 	@include border-radius(5px);
@@ -58,7 +58,7 @@ figure.code{
 			margin: -10px -15px 0;
 			padding: 10px 15px 5px;
 			display: block;
-			@include background(linear-gradient(top, #ccc, #ddd));
+			@include background(linear-gradient(top, $gray03, $gray04));
 			&:empty{
 				display: none;
 			}
@@ -70,7 +70,7 @@ figure.code{
 		}
 	}
 	.line-numbers{
-		border-right: 1px solid #ccc;
+		border-right: 1px solid $gray03;
 		color: #000;
 		padding-right: 15px;
 	}

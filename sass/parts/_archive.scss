@@ -1,7 +1,7 @@
 section.archive{
 	position: relative;
 	&:first-of-type{
-		border-top: 1px solid $light-shadow;
+		border-top: 1px solid $gray05;
 		article.archive{
 			border-top: none;
 		}
@@ -13,7 +13,7 @@ section.archive{
 		}
 	}
 	&:last-of-type{
-		border-bottom: 1px solid $border;
+		border-bottom: 1px solid $gray04;
 		article.archive{
 			border-bottom: none;
 		}
@@ -30,7 +30,7 @@ section.archive{
 			position: absolute;
 			top: -2px;
 			width: 100%;
-			border-top: 1px solid #ddd;
+			border-top: 1px solid $gray04;
 		}
 	}
 	article.archive{
@@ -39,7 +39,7 @@ section.archive{
 			margin-bottom: 0;
 		}
 		.meta{
-			color: $font-meta;
+			color: $gray02;
 			line-height: 2;
 			margin-top: 15px;
 			span{
@@ -48,10 +48,10 @@ section.archive{
 				display: inline-block;
 			}
 			a{
-				color: $font-meta;
+				color: $gray02;
 				@include transition(0.3s);
 				&:hover{
-					color: $font-main;
+					color: $gray01;
 				}
 			}
 			.date{

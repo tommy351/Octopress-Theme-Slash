@@ -1,6 +1,6 @@
 article{
-	border-bottom: 1px solid $border;
-	border-top: 1px solid $light-shadow;
+	border-bottom: 1px solid $gray04;
+	border-top: 1px solid $gray05;
 	padding: 30px 0;
 	position: relative;
 	h1.title{
@@ -8,7 +8,7 @@ article{
 		line-height: 35px;
 		margin-bottom: 20px;
 		a{
-			color: $font-main;
+			color: $gray01;
 		}
 	}
 	.entry{
@@ -42,13 +42,13 @@ article{
 		h2{
 			font-weight: 300;
 			margin-top: 10px;
-			border-bottom: 1px solid $border;
+			border-bottom: 1px solid $gray04;
 			position: relative;
 			&:before{
 				content: "";
 				position: absolute;
 				bottom: -2px;
-				border-bottom: 1px solid $light-shadow;
+				border-bottom: 1px solid $gray05;
 				width: 100%;
 			}
 		}
@@ -60,21 +60,22 @@ article{
 			height: auto;
 		}
 		blockquote{
-			background: $border;
-			border-left: 5px solid #ccc;
+			background: $gray04;
+			border-left: 5px solid $gray03;
 			padding: 15px 20px;
 			margin-top: 10px;
 			& > p:first-of-type{
 				margin-top: 0;
 			}
 		}
-		iframe[src*="youtube"]{
+		iframe{
 			margin-top: 10px;
+			border: none;
 		}
 		ol, ul, p, blockquote{
 			code{
-				background: $border;
-				border: 1px solid #ccc;
+				background: $gray04;
+				border: 1px solid $gray03;
 				padding: 1px 3px;
 				margin: 0 3px;
 				@include border-radius(5px);
@@ -84,10 +85,10 @@ article{
 			font: $meta-size $monospace;
 		}
 		>pre{
-			background: $border;
+			background: $gray04;
 			padding: 5px 15px;
 			margin-top: 10px;
-			border: 1px solid #ccc;
+			border: 1px solid $gray03;
 			line-height: 1.5;
 			overflow-x: auto;
 			@include border-radius(5px);
@@ -96,7 +97,7 @@ article{
 			background: image-url('caption.png') 0 4px no-repeat;
 			display: block;
 			font-size: $meta-size;
-			color: #999;
+			color: $gray02;
 			padding-left: 25px;
 		}
 		.video-container{

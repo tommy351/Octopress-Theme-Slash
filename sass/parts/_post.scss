@@ -7,13 +7,13 @@
 		top: 85px;
 		line-height: 2;
 		font-size: $meta-size;
-		color: $font-meta;
+		color: $gray02;
 		width: 170px;
 		a{
-			color: $font-meta;
+			color: $gray02;
 			@include transition(0.3s);
 			&:hover{
-				color: $font-main;
+				color: $gray01;
 			}
 		}
 		.date, .tags, .comments{
