@@ -15,7 +15,7 @@ $solar-blue:      #268bd2 !default;
 $solar-cyan:      #2aa198 !default;
 $solar-green:     #859900 !default;
 
-$solarized: dark !default;
+$solarized: light !default;
 
 @if $solarized == light {
 
@@ -55,8 +55,8 @@ figure.code{
 		font-size: $meta-size;
 		position: relative;
 		span{
-			margin: -10px -15px 0;
-			padding: 10px 15px 5px;
+			margin: -5px -15px 0;
+			padding: 5px 15px;
 			display: block;
 			@include background(linear-gradient(top, $gray03, $gray04));
 			&:empty{
@@ -65,7 +65,7 @@ figure.code{
 		}
 		a{
 			position: absolute;
-			top: $meta-size;
+			top: 5px;
 			right: 0;
 		}
 	}
@@ -79,7 +79,53 @@ figure.code{
 		padding-left: 15px;
 		overflow-x: auto;
 	}
-	/* Style */
+}
+.entry .gist{
+	background: $gray04;
+	color: $gray01;
+	padding: 30px 15px 5px;
+	margin-top: 10px;
+	border: 1px solid $gray03;
+	position: relative;
+	overflow: hidden;
+	@include border-radius(5px);
+	.gist-file{
+		margin: 0;
+		.gist-data{
+			background: none;
+			border: none;
+			pre{
+				font: $meta-size $monospace;
+				line-height: 1.5;
+			}
+		}
+		.gist-meta{
+			font: 300 $meta-size $default;
+			line-height: 1.5;
+			margin: 0 -16px -6px;
+			padding: 5px 15px;
+			@include background(linear-gradient(top, $gray04, $gray03));
+			a{
+				color: $main;
+				&:first-of-type{
+					position: absolute;
+					top: 5px;
+					right: 15px;
+					z-index: 1;
+				}
+				&:nth-of-type(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					padding: 5px 15px;
+					width: 100%;
+					@include background(linear-gradient(top, $gray03, $gray04));
+				}
+			}
+		}
+	}
+}
+figure.code, .gist-highlight{
 	.c {
 		color:$base01 !important;
 		font-style: italic !important;
