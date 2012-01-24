@@ -1,0 +1,140 @@
+#header{
+	height: 68px;
+	margin: 30px auto;
+	text-transform: uppercase;
+	line-height: 1;
+	h1{
+		a{
+			background: #000;
+			color: #fff;
+			padding: 30px 10px 10px 100px;
+			margin-right: 5px;
+			display: block;
+		}
+	}
+	ul{
+		background: $black;
+		font-size: 14px;
+		li{
+			display: inline-block;
+			position: relative;
+			>a{
+				color: #fff;
+				position: relative;
+				padding: 44px 20px 7px;
+				display: block;
+				border-bottom: 3px solid transparent;
+				&:after{
+					font: 13px/1 $symbol;
+					color: #666;
+					content: "[";
+					margin-left: 10px;
+				}
+				&:only-child{
+					&:after{
+						display: none;
+					}
+				}
+			}
+			&:hover{
+				>a{
+					background: #000;
+					border-bottom: 3px solid $main;
+					&:after{
+						color: #ccc;
+					}
+				}
+				>.sub-menu{
+					display: block;
+				}
+			}
+			.sub-menu{
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background: $main;
+				white-space: nowrap;
+				z-index: 5;
+				text-transform: none;
+				display: none;
+				font-size: 13px;
+				@include box-shadow(0 12px 16px $shadow);
+				li{
+					display: block;
+					a{
+						padding: 10px 40px 10px 20px;
+						border-bottom: 1px solid lighten($main, 5%);
+						border-top: 1px solid darken($main, 5%);
+						&:hover{
+							background: darken($main, 10%);
+						}
+						&:after{
+							content: ">";
+							position: absolute;
+							right: 10px;
+							font: 13px/1 $symbol;
+							color: lighten($main, 10%);
+						}
+						&:only-child{
+							padding-right: 20px;
+							&:after{
+								content: "";
+							}
+						}
+					}
+					&:hover{
+						>a{
+							background: darken($main, 10%);
+						}
+					}
+					&:first-of-type{
+						a{
+							border-top: none;
+						}
+					}
+					&:last-of-type{
+						a{
+							border-bottom: none;
+						}
+					}
+				}
+				.sub-menu{
+					top: 0;
+					left: 100%;
+				}
+			}
+		}
+	}
+	.search{
+		margin-top: 25px;
+		input[type="text"]{
+			background: rgba(0,0,0,0.2);
+			border-style: solid;
+			border-width: 1px 0;
+			border-color: rgba(0,0,0,0.5) transparent #555;
+			color: #ccc;
+			padding: 5px 15px;
+			margin: 2px 10px 0 0;
+			width: 150px;
+			font-size: 13px;
+			font-family: inherit;
+			@include border-radius(15px);
+			&:active, &:focus{
+				background: $black;
+			}
+		}
+		input[type="submit"]{
+			font: 18px/1 $symbol;
+			width: 24px;
+			height: 24px;
+			@include square(24px);
+			border: none;
+			background: none;
+			color: #fff;
+			cursor: pointer;
+			&:hover{
+				color: $main;
+			}
+		}
+	}
+}

@@ -1,0 +1,140 @@
+#main_col{
+	width: 750px;
+	article{
+		margin-bottom: 30px;
+		header{
+			line-height: 1;
+			.date{
+				background: #000;
+				color: #fff;
+				width: 40px;
+				height: 50px;
+				padding: 5px 10px;
+				margin-right: 5px;
+				white-space: nowrap;
+				text-transform: uppercase;
+				strong{
+					display: block;
+					font-size: 30px;
+					margin-bottom: 2px;
+					font-weight: bold;
+				}
+			}
+			.title{
+				background: $black;
+				color: #fff;
+				font-size: 25px;
+				padding: 25px 10px 10px;
+				max-width: 665px;
+				font-weight: inherit;
+				a{
+					color: #fff;
+				}
+			}
+		}
+		.entry{
+			text-align: justify;
+			margin-top: 5px;
+			background: #fff;
+			padding: 10px 20px;
+			line-height: 2;
+			color: #333;
+			position: relative;
+			word-wrap: break-word;
+			p{
+				margin-bottom: 10px;
+			}
+			img{
+				max-width: 100%;
+				height: auto;
+				margin-top: 10px;
+			}
+			a{
+				color: $main;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			ul, ol{
+				margin-left: 20px;
+				margin-bottom: 10px;
+			}
+			h2{
+				margin-bottom: 10px;
+				border-bottom: 1px solid #ddd;
+				font-weight: inherit;
+				color: #000;
+			}
+			blockquote{
+				color: #666;
+				font-size: 13px;
+				position: relative;
+				padding-left: 30px;
+				margin-bottom: 10px;
+				&:before{
+					position: absolute;
+					content: "“";
+					font-size: 50px;
+					line-height: 1;
+					top: 0;
+					left: 0;
+					@include user-select(none);
+				}
+				&.attach:before{
+					content: "A";
+					font: 13px/2 $symbol;
+				}
+			}
+			pre{
+				color: #666;
+				font: 13px $code-font;
+				position: relative;
+				margin-bottom: 10px;
+				overflow-x: auto;
+				line-height: 1.5;
+			}
+			code{
+				font-family: $code-font;
+			}
+			footer{
+				border-top: 1px solid #ddd;
+				padding-top: 10px;
+				min-height: 26px;
+				a{
+					color: #000;
+					position: relative;
+					&:hover{
+						color: $main;
+						text-decoration: none;
+					}
+					&:before, &:after{
+						font: 16px $symbol;
+						@include user-select(none);
+					}
+				}
+				.more-link{
+					&:hover{
+						color: $main;
+						text-decoration: none;
+					}
+					&:before{
+						content: "j";
+						padding-right: 10px;
+					}
+				}
+				.comment{
+					&:after{
+						content: "d";
+						right: 0;
+						padding-left: 10px;
+					}
+					&:hover{
+						&:after{
+							content: "e";
+						}
+					}
+				}
+			}
+		}
+	}
+}

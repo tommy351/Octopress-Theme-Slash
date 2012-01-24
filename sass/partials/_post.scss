@@ -1,0 +1,21 @@
+article{
+	.entry{
+		footer{
+			.cat{
+				font-size: 13px;
+				position: relative;
+				padding-left: 25px;
+				&:before{
+					font-family: $symbol;
+					padding-right: 10px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					content: ",";
+					font-size: 14px;
+					@include user-select(none);
+				}
+			}
+		}
+	}
+}

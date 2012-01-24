@@ -1,0 +1,51 @@
+$max-width: 1200px;
+
+@mixin square($property){
+	width: $property;
+	height: $property;
+}
+@mixin user-select($select){
+	-moz-user-select: $select;
+	-khtml-user-select: $select;
+	-webkit-user-select: $select;
+	-o-user-select: $select;
+	user-select: $select;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: $default;
+	font-weight: 300;
+	font-size: 14px;
+	background: #333 image-url('random_grey_variations.png');
+}
+h1{
+	font-size: 2em;
+}
+h2{
+	font-size: 1.5em;
+}
+h3{
+	font-size: 1.3em;
+}
+a{
+	text-decoration: none;
+	outline-width: 0;
+	color: $main;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.inner{
+	width: $max-width;
+	margin: 0 auto;
+}

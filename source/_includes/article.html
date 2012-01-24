@@ -1,0 +1,34 @@
+{% unless page.no_header %}
+    <header>
+        {% if index %}
+            <div class="date left"><strong>{{ post.date | date: "%e" }}</strong>{{ post.date | date: "%b" }}</div>
+            <h1 class="title left"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h2>
+        {% else %}
+            <div class="date left"><strong>{{ post.date | date: "%e" }}</strong>{{ post.date | date: "%b" }}</div>
+            <h1 class="title left">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+        {% endif %}
+        <div class="clear"></div>
+    </header>
+{% endunless %}
+{% if index %}
+    <div class="entry">
+        {{ content | excerpt }}
+        {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+        <footer>
+            {% if excerpted == 'true' %}
+                <a href="{{ root_url }}{{ post.url }}" class="more-link">閱讀全文</a>
+            {% endif %}
+            <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread" class="comment right">留言</a>
+        </footer>
+    </div>
+{% else %}
+    <div class="entry">
+        {{ content }}
+        <footer>
+            <div class="social left">{% include post/sharing.html %}</div>
+            <a href="#disqus_thread" class="comment right">留言</a>
+            <div class="clear"></div>
+            {% include post/categories.html %}
+        </footer>
+    </div>
+{% endif %}

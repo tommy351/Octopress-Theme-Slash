@@ -1,0 +1,10 @@
+$default: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$symbol: "WebSymbolsRegular", sans-serif;
+$code-font: "Consolas",Monaco,Courier New,Courier,monospace;
+
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: image-url('fonts/websymbols-regular-webfont.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
