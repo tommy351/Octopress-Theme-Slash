@@ -16,14 +16,62 @@ header{
 	}
 	nav{
 		margin-left: 30px;
-		ul{
+		>ul{
 			list-style: none;
-			li{
+			padding-right: 30px;
+			>li{
 				float: left;
 				margin-left: 50px;
+				position: relative;
+				>a{
+					padding: 35px 30px 35px 0;
+					margin-top: -35px;
+					background: image-url('detail.png') right center no-repeat;
+					&:only-child{
+						padding-right: 0;
+						background: none;
+					}
+				}
 			}
 			ul{
+				position: absolute;
+				top: 60px;
+				left: 0;
+				z-index: 10;
+				white-space: nowrap;
+				background: #ddd;
+				border: 1px solid #ccc;
+				border-radius: 0 0 5px 5px;
+				box-shadow: 0 4px 8px #DDDDDD;
+				list-style: none;
 				display: none;
+				li{
+					@include border-shadow(#eee, #ccc);
+					&:hover{
+						background: #d5d5d5;
+					}
+					&:first-of-type{
+						border-top: none;
+					}
+					&:last-of-type{
+						border-bottom: none;
+					}
+					a{
+						display: block;
+						padding: 5px 15px;
+						width: 100%;
+						&:hover{
+							color: #666;
+						}
+					}
+				}
+			}
+			li{
+				&:hover{
+					>ul{
+						display: block;
+					}
+				}
 			}
 		}
 	}
