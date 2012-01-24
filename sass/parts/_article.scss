@@ -36,15 +36,9 @@ article{
 				margin-top: 0;
 			}
 		}
+		
 		p{
-			margin-top: 10px;
-			code{
-				background: $border;
-				border: 1px solid #ccc;
-				padding: 1px 3px;
-				border-radius: 5px;
-				margin: 0 3px;
-			}
+			margin-top: 10px;	
 		}
 		h2{
 			font-weight: 300;
@@ -77,6 +71,15 @@ article{
 		}
 		iframe[src*="youtube"]{
 			margin-top: 10px;
+		}
+		ol, ul, p, blockquote{
+			code{
+				background: $border;
+				border: 1px solid #ccc;
+				padding: 1px 3px;
+				border-radius: 5px;
+				margin: 0 3px;
+			}
 		}
 		code{
 			font-family: $monospace;
