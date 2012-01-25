@@ -14,6 +14,7 @@
             <ul class="main">
                 <li><a href="#install">安裝</a></li>
                 <li><a href="#overview">概覽</a></li>
+                <li><a href="#questions">Q&amp;A</a></li>
                 <li><a href="index.html">English</a></li>
             </ul>
         </nav>
@@ -117,14 +118,21 @@ $ rake generate</pre>
             <iframe src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light/" style="width: 100%; height: 300px"></iframe>
             </div>
         </article>
-        <article class="page">
-            <h1 class="title">下載</h1>
+        <article class="page" id="questions">
+            <h1 class="title">Q&amp;A</h1>
             <div class="entry">
-                <p>還有許多功能一言難盡，何不現在就試試看呢？</p>
-                <pre>$ cd octopress
-$ git clone git@github.com:tommy351/Octopress-Theme-Slash.git .themes/slash
-$ rake install['slash']
-$ rake generate</pre>
+                <h3>如何顯示右上角的 Facebook 連結？</h3>
+                <p>在 <code>_config.yml</code> 新增 <code>facebook_user</code> 參數，並填入您的 Facebook ID。</p>
+                <h3>如何編輯選單？</h3>
+                <p>編輯 <code>slash</code>&rarr;<code>source</code>&rarr;<code>_includes</code>&rarr;<code>custom</code>&rarr;<code>navigation.html</code>。</p>
+                <h3>如何隱藏頁首的 Twitter 訊息串？</h3>
+                <p>刪除 <code>slash</code>&rarr;<code>source</code>&rarr;<code>_includes</code>&rarr;<code>banner.html</code>。</p>
+                <h3>如何關閉 Fancybox？</h3>
+                <ol>
+                    <li>刪除 <code>slash</code>&rarr;<code>source</code>&rarr;<code>_includes</code>&rarr;<code>after_footer.html</code> 的第 4 行。</li>
+                    <li>刪除 <code>slash</code>&rarr;<code>source</code>&rarr;<code>javascripts</code>&rarr;<code>caption.js</code> 的第 14 行。</li>
+                </ol>
+                <p>若您有任何問題或建議，歡迎在<a href="http://zespia.tw/blog/2012/01/25/slash-theme/">這裡</a>留言。</p>
             </div>
         </article>
         <div class="share">
