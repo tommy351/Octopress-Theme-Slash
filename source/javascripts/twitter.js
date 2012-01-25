@@ -15,15 +15,15 @@
 			if (navigator.appName === 'Microsoft Internet Explorer') return '';
 
 			var unit = {
-				now: '現在',
-				minute: '1 分鐘前',
-				minutes: ' 分鐘前',
-				hour: '1 小時前',
-				hours: ' 小時前',
-				day: '昨天',
-				days: ' 天前',
-				week: '1 週前',
-				weeks: ' 週前'
+				now: 'Now',
+				minute: '1 min',
+				minutes: ' mins',
+				hour: '1 hr',
+				hours: ' hrs',
+				day: 'Yesterday',
+				days: ' days',
+				week: '1 week',
+				weeks: ' weeks'
 			};
 
 			var current = new Date(),

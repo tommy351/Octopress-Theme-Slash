@@ -1,5 +1,5 @@
 (function($){
-	var appends = '<option>選單</option>';
+	var appends = '<option>Menu</option>';
 
 	$('.menu .main > li').each(function(){
 		var link = $(this).children('a');
