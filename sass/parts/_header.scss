@@ -20,7 +20,6 @@ header{
 			>li{
 				display: inline-block;
 				margin-left: 50px;
-				position: relative;
 				&:hover{
 					>a{
 						color: $main;
@@ -44,32 +43,47 @@ header{
 				white-space: nowrap;
 				background: $gray04;
 				border: 1px solid $gray03;
-				@include border-radius(0 0 5px 5px);
-				box-shadow: 0 4px 8px $gray04;
 				list-style: none;
 				display: none;
+				@include box-shadow(0 4px 8px rgba(0,0,0,0.1));
+				@include border-radius(0 0 5px 5px);
+				ul{
+					@include border-radius(0 5px 5px 5px);
+				}
 				li{
-					@include border-shadow(#eee, $gray03);
+					@include border-shadow($background, $gray03);
 					&:hover{
 						background: #d5d5d5;
 					}
 					&:first-of-type{
 						border-top: none;
+						ul{
+							@include border-radius(0 0 5px 5px);
+						}
 					}
 					&:last-of-type{
 						border-bottom: none;
 					}
-					a{
+					>a{
+						background: image-url('detail-sub.png') right center no-repeat;
 						display: block;
-						padding: 5px 15px;
-						width: 100%;
+						padding: 5px 30px 5px 15px;
 						&:hover{
 							color: $gray01;
 						}
+						&:only-child{
+							background: none;
+							padding-right: 15px;
+						}
 					}
+				}
+				ul{
+					top: 0;
+					left: 100%;
 				}
 			}
 			li{
+				position: relative;
 				&:hover{
 					>ul{
 						display: block;
