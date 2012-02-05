@@ -54,7 +54,7 @@
 		if ($(window).width() > 600){
 			banner.show();
 
-			$.getJSON('http://twitter.com/status/user_timeline/'+userid+'.json?count='+count+'&callback=?', function(json){
+			$.getJSON('https://api.twitter.com/1/statuses/user_timeline/'+userid+'.json?count='+count+'&trim_user=true&callback=?', function(json){
 				var length = json.length,
 					fragment = document.createDocumentFragment(),
 					counts = 0,
