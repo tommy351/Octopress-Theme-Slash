@@ -1,5 +1,5 @@
 (function($){
-	$.fn.getTwitterFeed = function(userid, count){
+	$.fn.getTwitterFeed = function(userid, count, reply){
 		var banner = $(this),
 			feed = banner.find('.feed'),
 			interval = 10000,
@@ -52,9 +52,9 @@
 		}
 
 		if ($(window).width() > 600){
+			var url = 'https://api.twitter.com/1/statuses/user_timeline/'+userid+'.json?count='+count+'&exclude_replies='+(reply ? '0' : '1')+'&trim_user=true&callback=?';
 			banner.show();
-
-			$.getJSON('https://api.twitter.com/1/statuses/user_timeline/'+userid+'.json?count='+count+'&trim_user=true&callback=?', function(json){
+			$.getJSON(url, function(json){
 				var length = json.length,
 					fragment = document.createDocumentFragment(),
 					counts = 0,
