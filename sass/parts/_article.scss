@@ -35,7 +35,6 @@ article{
 				margin-top: 0;
 			}
 		}
-		
 		p{
 			margin-top: 10px;	
 		}
@@ -92,6 +91,24 @@ article{
 			line-height: 1.5;
 			overflow-x: auto;
 			@include border-radius(5px);
+		}
+		table{
+			background: $gray04;
+			border: 1px solid $gray03;
+			border-spacing: 0;
+			margin-top: 10px;
+			th{
+				background: $gray03;
+				padding: 0 15px;
+			}
+			td{
+				text-align: center;
+			}
+			tr{
+				&:nth-of-type(2n){
+					background: #d5d5d5;
+				}
+			}
 		}
 		.caption{
 			background: image-url('caption.png') 0 4px no-repeat;
