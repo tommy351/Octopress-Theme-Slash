@@ -11,6 +11,8 @@ Type the code below in terminal.
 	$ rake install['slash']
 	$ rake generate
 
+Have problems when installing with zsh? Try `rake install\['slash'\]` instead.
+
 ##Features
 
 - Read `alt` property of photos and add it below photos.
