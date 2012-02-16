@@ -10,11 +10,8 @@
 		color: $gray02;
 		width: 170px;
 		a{
-			color: $gray02;
+			@include link-colors($gray02, $gray01);
 			@include transition(0.3s);
-			&:hover{
-				color: $gray01;
-			}
 		}
 		.date, .tags, .comments{
 			padding-left: 30px;
@@ -41,7 +38,7 @@
 			position: static;
 			width: auto;
 			.date, .tags, .comments{
-				display: inline-block;
+				@include inline-block;
 				margin-right: 30px;
 			}
 		}

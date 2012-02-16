@@ -45,7 +45,7 @@ section.archive{
 			span{
 				margin-right: 30px;
 				padding-left: 30px;
-				display: inline-block;
+				@include inline-block;
 			}
 			a{
 				color: $gray02;
