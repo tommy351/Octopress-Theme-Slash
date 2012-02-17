@@ -79,6 +79,10 @@ figure.code{
 	table {
 		border: none;
 		text-align: left;
+		margin-top: 0;
+		td{
+			text-align: left;
+		}
 	}
 	td.code{
 		width: 100%;
