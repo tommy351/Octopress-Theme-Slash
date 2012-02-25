@@ -7,7 +7,7 @@ Slash is a minimal theme for Octopress.
 Type the code below in terminal.
 
 	$ cd octopress
-	$ git clone git@github.com:tommy351/Octopress-Theme-Slash.git .themes/slash
+	$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
 	$ rake install['slash']
 	$ rake generate
 
