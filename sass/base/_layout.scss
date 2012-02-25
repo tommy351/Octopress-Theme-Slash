@@ -32,7 +32,7 @@ a{
 	float: right;
 }
 .clear{
-	clear: both;
+	@include pie-clearfix;
 }
 .inner{
 	width: $max-width;
