@@ -9,7 +9,7 @@
         <div class="date">{% include post/date.html %}{{ time }}</div>
         <div class="tags">{% include post/categories.html %}</div>
         {% if site.disqus_short_name and post.comments == true and site.disqus_show_comment_count == true %}
-        <div class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a></div>
+        <span class="comments"><a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></span>
         {% endif %}
     </div>
 {% else %}
@@ -19,7 +19,7 @@
         <div class="date">{% include post/date.html %}{{ time }}</div>
         <div class="tags">{% include post/categories.html %}</div>
         {% if site.disqus_short_name and page.comments == true and site.disqus_show_comment_count == true %}
-        <div class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a></div>
+        <span class="comments"><a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></span>
         {% endif %}
     </div>
 {% endif %}

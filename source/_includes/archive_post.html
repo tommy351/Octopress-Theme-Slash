@@ -4,6 +4,6 @@
 	<span class="date">{{ post.date | date: "%b %e" }}</span>
 	<span class="tags">{% include post/categories.html %}</span>
     {% if site.disqus_short_name and post.comments == true %}
-    <span class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a></span>
+    <span class="comments"><a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></span>
     {% endif %}
 </div>
