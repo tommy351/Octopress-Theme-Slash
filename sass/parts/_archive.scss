@@ -32,9 +32,23 @@ section.archive{
 			width: 100%;
 			border-top: 1px solid $gray04;
 		}
+		@media screen and (max-width: 600px){
+			position: relative;
+			width: 100%;
+			& + article.archive{
+				border-top: none;
+				h1{
+					padding-top: 15px;
+				}
+			}
+		}
 	}
 	article.archive{
 		margin-left: 200px;
+		@media screen and (max-width: 600px){
+			margin-left: 0;
+			padding: 15px 0;
+		}
 		h1{
 			margin-bottom: 0;
 		}
@@ -42,6 +56,9 @@ section.archive{
 			color: $gray02;
 			line-height: 2;
 			margin-top: 15px;
+			@media screen and (max-width: 600px){
+				display: none;
+			}
 			span{
 				margin-right: 30px;
 				padding-left: 30px;
@@ -62,28 +79,6 @@ section.archive{
 			}
 			.comments{
 				background: image-url('comments.png') 0 center no-repeat;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 600px){
-	section.archive{
-		h1.archive-title{
-			position: relative;
-			width: 100%;
-			& + article.archive{
-				border-top: none;
-				h1{
-					padding-top: 15px;
-				}
-			}
-		}
-		article.archive{
-			margin-left: 0;
-			padding: 15px 0;
-			.meta{
-				display: none;
 			}
 		}
 	}

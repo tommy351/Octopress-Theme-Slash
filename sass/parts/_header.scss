@@ -3,6 +3,16 @@ header{
 	padding: 30px 0;
 	border-bottom: 1px solid $gray04;
 	line-height: 30px;
+	@media screen and (max-width: 1040px){
+		height: auto;
+		position: relative;
+		padding-bottom: 10px;
+		>.right{
+			position: absolute;
+			top: 30px;
+			right: 0;
+		}
+	}
 	a{
 		color: $gray01;
 		@include transition(0.3s);
@@ -13,13 +23,31 @@ header{
 	h1{
 		font-weight: 300;
 		font-size: 30px;
+		@media screen and (max-width: 1040px){
+			float: none !important;
+		}
 	}
 	nav{
 		margin-left: 30px;
+		@media screen and (max-width: 1040px){
+			margin-left: 0;
+			margin-top: 15px;
+			float: none !important;
+		}
 		>ul{
+			@media screen and (max-width: 600px){
+				display: none;
+			}
 			>li{
-				@include inline-block;
 				margin-left: 50px;
+				@include inline-block;
+				@media screen and (max-width: 1040px){
+					margin-left: 0;
+					margin-right: 50px;
+					&:last-of-type{
+						margin-right: 0;
+					}
+				}
 				&:hover{
 					>a{
 						color: $main;
@@ -29,6 +57,13 @@ header{
 					padding: 38px 30px 38px 0;
 					margin-top: -38px;
 					background: image-url('detail.png') right center no-repeat;
+					@media screen and (max-width: 1040px){
+						padding: 18px 30px 18px 0;
+						/* Todo */
+						&:only-child{
+							padding-right: 0;
+						}
+					}
 					&:only-child{
 						padding-right: 0;
 						background: none;
@@ -45,6 +80,9 @@ header{
 				border: 1px solid $gray03;
 				list-style: none;
 				display: none;
+				@media screen and (max-width: 1040px){
+					top: 40px;
+				}
 				@include box-shadow(0 4px 8px rgba(0,0,0,0.1));
 				@include border-radius(0 0 5px 5px);
 				ul{
@@ -94,6 +132,9 @@ header{
 		select{
 			display: none;
 			margin-bottom: 10px;
+			@media screen and (max-width: 600px){
+				display: block;
+			}
 		}
 	}
 	.search{
@@ -106,17 +147,26 @@ header{
 			width: 100px;
 			@include transition(0.3s);
 			@include border-radius(15px);
+			@media screen and (max-width: 600px){
+				width: 60px;
+			}
 			&:focus, &:active{
 				background: image-url('search.png') 10px center no-repeat #fff;
 				width: 150px;
 				border-top: 1px solid $gray03;
 				color: $gray01;
 				outline: none;
+				@media screen and (max-width: 600px){
+					width: 100px;
+				}
 			}
 		}
 	}
 	.social{
 		margin-right: 15px;
+		@media screen and (max-width: 600px){
+			display: none;
+		}
 		a{
 			@include border-radius(50%);
 			@include inline-block;
@@ -154,69 +204,6 @@ header{
 				border: 1px solid #EF7522;
 				&:hover{
 					border: 1px solid darken(#EF7522, 10%);
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 1030px){
-	header{
-		height: auto;
-		position: relative;
-		padding-bottom: 10px;
-		h1{
-			float: none !important;
-		}
-		nav{
-			margin-left: 0;
-			margin-top: 15px;
-			float: none !important;
-			>ul{
-				>li{
-					margin-left: 0;
-					margin-right: 50px;
-					&:last-of-type{
-						margin-right: 0;
-					}
-					>a{
-						padding: 18px 30px 18px 0;
-						&:only-child{
-							padding-right: 0;
-						}
-					}
-				}
-				ul{
-					top: 40px;
-				}
-			}
-		}
-		>.right{
-			position: absolute;
-			top: 30px;
-			right: 0;
-		}
-	}
-}
-
-@media screen and (max-width: 600px){
-	header{
-		nav{
-			>ul{
-				display: none;
-			}
-			select{
-				display: block;
-			}
-		}
-		.social{
-			display: none;
-		}
-		.search{
-			input[type="text"]{
-				width: 60px;
-				&:focus, &:active{
-					width: 100px;
 				}
 			}
 		}

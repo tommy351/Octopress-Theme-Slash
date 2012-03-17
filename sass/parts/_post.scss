@@ -1,6 +1,9 @@
 .post{
 	h1.title, .entry{
 		margin-left: 200px;
+		@media screen and (max-width: 800px){
+			margin-left: 0;
+		}
 	}
 	.meta{
 		position: absolute;
@@ -9,12 +12,21 @@
 		font-size: $meta-size;
 		color: $gray02;
 		width: 170px;
+		@media screen and (max-width: 800px){
+			margin-top: 15px;
+			position: static;
+			width: auto;
+		}
 		a{
 			@include link-colors($gray02, $gray01);
 			@include transition(0.3s);
 		}
 		.date, .tags, .comments{
 			padding-left: 30px;
+			@media screen and (max-width: 800px){
+				@include inline-block;
+				margin-right: 30px;
+			}
 		}
 		.date{
 			background: image-url('date.png') 0 center no-repeat;
@@ -24,23 +36,6 @@
 		}
 		.comments{
 			background: image-url('comments.png') 0 center no-repeat;
-		}
-	}
-}
-
-@media screen and (max-width: 800px){
-	.post{
-		h1.title, .entry{
-			margin-left: 0;
-		}
-		.meta{
-			margin-top: 15px;
-			position: static;
-			width: auto;
-			.date, .tags, .comments{
-				@include inline-block;
-				margin-right: 30px;
-			}
 		}
 	}
 }

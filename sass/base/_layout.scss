@@ -10,6 +10,12 @@ body{
 	font-size: 14px;
 	background: $background;
 	color: $gray01;
+	@media screen and (max-width: 1040px){
+		margin: 0 20px;
+	}
+	@media screen and (max-width: 600px){
+		font-size: 13px;
+	}
 }
 h1{
 	font-size: 1.8em;
@@ -37,19 +43,7 @@ a{
 .inner{
 	width: $max-width;
 	margin: 0 auto;
-}
-
-@media screen and (max-width: 1030px){
-	body{
-		margin: 0 30px;
-	}
-	.inner{
+	@media screen and (max-width: 1040px){
 		width: 100%;
-	}
-}
-
-@media screen and (max-width: 600px){
-	body{
-		font-size: 13px;
 	}
 }
