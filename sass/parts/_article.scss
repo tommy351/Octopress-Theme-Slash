@@ -25,22 +25,26 @@ article{
 			padding-left: 30px;
 			background: image-url('more.png') 0 center no-repeat;
 		}
+		p, blockquote, ul, ol, dl, table, iframe, h1, h2, h3, h4, h5, h6, .video-container{
+			margin-top: 10px;
+		}
+		ul, ol, dl{
+			margin-left: 20px;
+			ul, ol, dl{
+				margin-top: 0;
+			}
+		}
 		strong{
 			font-weight: bold;
 		}
-		ol, ul{
-			margin-left: 20px;
-			margin-top: 10px;
-			ol, ul{
-				margin-top: 0;
-			}
+		em{
+			font-style: italic;
 		}
 		p{
 			margin-top: 10px;	
 		}
 		h2{
 			font-weight: 300;
-			margin-top: 10px;
 			border-bottom: 1px solid $gray04;
 			position: relative;
 			&:before{
@@ -50,9 +54,6 @@ article{
 				border-bottom: 1px solid $gray05;
 				width: 100%;
 			}
-		}
-		h3{
-			margin-top: 10px;
 		}
 		img, video{
 			max-width: 100%;
@@ -68,7 +69,6 @@ article{
 			}
 		}
 		iframe{
-			margin-top: 10px;
 			border: none;
 		}
 		table{
