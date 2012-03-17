@@ -199,6 +199,13 @@ header{
 					border: 1px solid darken(#55CFF8, 10%);
 				}
 			}
+			&.github{
+				background: image-url('github.png') center no-repeat rgb(175,182,202);
+				border: 1px solid rgb(175,182,202);
+				&:hover{
+					border: 1px solid darken(rgb(175,182,202), 10%);
+				}
+			}
 			&.rss{
 				background: image-url('rss.png') center no-repeat #EF7522;
 				border: 1px solid #EF7522;
