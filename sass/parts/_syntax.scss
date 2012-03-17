@@ -38,17 +38,42 @@ $solarized: light !default;
   $base3:   $_base03;
 }
 
-/* non highlighted code colors */
-$pre-bg: $base03 !default;
-$pre-border: darken($base02, 5) !default;
-$pre-color: $base1 !default;
+$pre-bg: $gray04;
+$pre-border: $gray03;
+
+article{
+	code, pre{
+		background: $pre-bg;
+		border: 1px solid $pre-border;
+		font-family: $monospace;
+	}
+	code{
+		font-size: $meta-size;
+		padding: 1px 3px;
+		margin: 0 3px;
+		@include border-radius(5px);
+	}
+	pre{
+		font-size: 1 / 0.9em;
+		line-height: 1.5;
+		margin-top: 10px;
+		padding: 5px 15px;
+		@include border-radius(5px);
+		code{
+			background: none;
+			border: none;
+			padding: 0;
+			margin: 0;
+			@include border-radius(0);
+		}
+	}
+}
 
 figure.code{
-	background: $gray04;
-	padding: 5px 15px;
+	background: $pre-bg;
+	border: 1px solid $pre-border;
 	margin-top: 10px;
-	border: 1px solid $gray03;
-	line-height: 1.5;
+	padding: 5px 15px;
 	@include border-radius(5px);
 	figcaption{
 		font-size: $meta-size;
@@ -57,7 +82,7 @@ figure.code{
 			margin: -5px -15px 0;
 			padding: 5px 15px;
 			display: block;
-			@include background(linear-gradient(top, $gray03, $gray04));
+			@include background(linear-gradient(top, $pre-border, $pre-bg));
 			&:empty{
 				display: none;
 			}
@@ -68,15 +93,23 @@ figure.code{
 			right: 0;
 		}
 	}
+	code, pre{
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		@include border-radius(0);
+	}
 	.highlight{
 		overflow-x: auto;
 	}
 	.line-numbers{
-		border-right: 1px solid $gray03;
-		color: #000;
+		border-right: 1px solid $pre-border;
+		font-family: $monospace;
 		padding-right: 15px;
+		text-align: right;
 	}
-	table {
+	table{
 		border: none;
 		text-align: left;
 		margin-top: 0;
@@ -91,11 +124,11 @@ figure.code{
 	}
 }
 .entry .gist{
-	background: $gray04;
+	background: $pre-bg;
 	color: $gray01;
 	padding: 30px 15px 5px;
 	margin-top: 10px;
-	border: 1px solid $gray03;
+	border: 1px solid $pre-border;
 	position: relative;
 	overflow: hidden;
 	@include border-radius(5px);
@@ -114,7 +147,7 @@ figure.code{
 			line-height: 1.5;
 			margin: 0 -16px -6px;
 			padding: 5px 15px;
-			@include background(linear-gradient(top, $gray04, $gray03));
+			@include background(linear-gradient(top, $pre-bg, $pre-border));
 			a{
 				color: $main;
 				&:first-of-type{
@@ -129,7 +162,7 @@ figure.code{
 					left: 0;
 					padding: 5px 15px;
 					width: 100%;
-					@include background(linear-gradient(top, $gray03, $gray04));
+					@include background(linear-gradient(top, $pre-border, $pre-bg));
 				}
 			}
 		}
