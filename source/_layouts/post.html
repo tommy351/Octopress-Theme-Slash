@@ -4,7 +4,9 @@ single: true
 ---
 
 <article class="post">{% include article.html %}</article>
-{% include post/sharing.html %}
+{% unless page.sharing == false %}
+	{% include post/sharing.html %}
+{% endunless %}
 {% if site.disqus_short_name and page.comments == true %}
 <section id="comment">
     <h1 class="title">Comments</h1>
