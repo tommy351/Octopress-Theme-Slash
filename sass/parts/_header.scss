@@ -206,6 +206,13 @@ header{
 					border: 1px solid darken(rgb(175,182,202), 10%);
 				}
 			}
+			&.pinterest{
+				background: image-url('pinterest.png') center no-repeat rgb(190,64,55);
+				border: 1px solid rgb(190,64,55);
+				&:hover{
+					border: 1px solid darken(rgb(190,64,55), 10%);
+				}
+			}
 			&.rss{
 				background: image-url('rss.png') center no-repeat #EF7522;
 				border: 1px solid #EF7522;
