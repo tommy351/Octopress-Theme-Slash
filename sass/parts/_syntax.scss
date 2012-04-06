@@ -58,7 +58,7 @@ article{
 		line-height: 1.5;
 		margin-top: 10px;
 		padding: 5px 15px;
-		overflow-x: scroll;
+		overflow-x: auto;
 		@include border-radius(5px);
 		code{
 			background: none;
