@@ -8,7 +8,9 @@ layout: default
     {% endif %}
     <div class="entry">{{ content }}</div>
 </article>
-{% include post/sharing.html %}
+{% unless page.footer == false %}
+    {% include post/sharing.html %}
+{% endunless %}
 {% if site.disqus_short_name and page.comments == true %}
 <section id="comment">
     <h1 class="title">Comments</h1>
