@@ -1,16 +1,19 @@
 (function($){
-	/* external.js */
-	var host = location.host;
+	// Open external links in new window
+	var externalLinks = function(){
+		var host = location.host;
 
-	$('a').on('click', function(e){
-		var href = $(this).attr('href'),
-			link = href.replace(/(https?:\/\/)(.*)\/(.*)/, '$2');
+		$('body').on('click', 'a', function(e){
+			var href = this.href,
+				link = href.replace(/https?:\/\/([^\/]+)(.*)/, '$1');
 
-		if (href.match('https?') && link != host){
-			window.open(href);
-			e.preventDefault();
-		}
-	});
+			if (link != host){
+				window.open(href);
+				e.preventDefault();
+			}
+		});
+	};
+
 
 	/* navigation.js */
 	var appends = '<option>Menu</option>';
@@ -42,4 +45,5 @@
 		});
 	});
 	$('.fancybox').fancybox();
+	externalLinks(); // Delete or comment this line to disable opening external links in new window
 })(jQuery);
