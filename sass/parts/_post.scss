@@ -10,7 +10,7 @@
 		top: 85px;
 		line-height: 2;
 		font-size: $meta-size;
-		color: $gray02;
+		color: $color-gray02;
 		width: 170px;
 		@media screen and (max-width: 800px){
 			margin-top: 15px;
@@ -18,7 +18,7 @@
 			width: auto;
 		}
 		a{
-			@include link-colors($gray02, $gray01);
+			@include link-colors($color-gray02, $color-gray01);
 			@include transition(0.3s);
 		}
 		.date, .tags, .comments{

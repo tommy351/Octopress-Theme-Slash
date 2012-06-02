@@ -38,8 +38,8 @@ $solarized: light !default;
   $base3:   $_base03;
 }
 
-$pre-bg: $gray04;
-$pre-border: $gray03;
+$pre-bg: $color-gray04;
+$pre-border: $color-gray03;
 
 article{
 	code, pre{
@@ -126,7 +126,7 @@ figure.code{
 }
 .entry .gist{
 	background: $pre-bg;
-	color: $gray01;
+	color: $color-gray01;
 	padding: 30px 15px 5px;
 	margin-top: 10px;
 	border: 1px solid $pre-border;
@@ -150,7 +150,7 @@ figure.code{
 			padding: 5px 15px;
 			@include background(linear-gradient(top, $pre-bg, $pre-border));
 			a{
-				color: $main;
+				color: $color-main;
 				&:first-of-type{
 					position: absolute;
 					top: 5px;

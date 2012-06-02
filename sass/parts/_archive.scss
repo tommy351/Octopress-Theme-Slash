@@ -1,7 +1,7 @@
 section.archive{
 	position: relative;
 	&:first-of-type{
-		border-top: 1px solid $gray05;
+		border-top: 1px solid $color-gray05;
 		article.archive{
 			border-top: none;
 		}
@@ -13,7 +13,7 @@ section.archive{
 		}
 	}
 	&:last-of-type{
-		border-bottom: 1px solid $gray04;
+		border-bottom: 1px solid $color-gray04;
 		article.archive{
 			border-bottom: none;
 		}
@@ -30,7 +30,7 @@ section.archive{
 			position: absolute;
 			top: -2px;
 			width: 100%;
-			border-top: 1px solid $gray04;
+			border-top: 1px solid $color-gray04;
 		}
 		@media screen and (max-width: 600px){
 			position: relative;
@@ -53,7 +53,7 @@ section.archive{
 			margin-bottom: 0;
 		}
 		.meta{
-			color: $gray02;
+			color: $color-gray02;
 			line-height: 2;
 			margin-top: 15px;
 			@media screen and (max-width: 600px){
@@ -65,10 +65,10 @@ section.archive{
 				@include inline-block;
 			}
 			a{
-				color: $gray02;
+				color: $color-gray02;
 				@include transition(0.3s);
 				&:hover{
-					color: $gray01;
+					color: $color-gray01;
 				}
 			}
 			.date{

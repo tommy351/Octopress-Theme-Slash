@@ -1,5 +1,5 @@
 #banner{
-	color: $gray02;
+	color: $color-gray02;
 	padding: 30px 0;
 	line-height: 30px;
 	text-align: center;
@@ -8,11 +8,11 @@
 	@include border-shadow();
 	&:hover{
 		a{
-			color: $main;
+			color: $color-main;
 		}
 	}
 	a{
-		color: $gray02;
+		color: $color-gray02;
 		@include transition(0.3s);
 		&:hover{
 			text-decoration: underline;

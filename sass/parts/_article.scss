@@ -1,6 +1,6 @@
 article{
-	border-bottom: 1px solid $gray04;
-	border-top: 1px solid $gray05;
+	border-bottom: 1px solid $color-gray04;
+	border-top: 1px solid $color-gray05;
 	padding: 30px 0;
 	position: relative;
 	@media screen and (max-width: 800px){
@@ -14,7 +14,7 @@ article{
 		line-height: 35px;
 		margin-bottom: 20px;
 		a{
-			color: $gray01;
+			color: $color-gray01;
 		}
 	}
 	.entry{
@@ -51,13 +51,13 @@ article{
 		}
 		h2{
 			font-weight: 300;
-			border-bottom: 1px solid $gray04;
+			border-bottom: 1px solid $color-gray04;
 			position: relative;
 			&:before{
 				content: "";
 				position: absolute;
 				bottom: -2px;
-				border-bottom: 1px solid $gray05;
+				border-bottom: 1px solid $color-gray05;
 				width: 100%;
 			}
 		}
@@ -66,8 +66,8 @@ article{
 			height: auto;
 		}
 		blockquote{
-			background: $gray04;
-			border-left: 5px solid $gray03;
+			background: $color-gray04;
+			border-left: 5px solid $color-gray03;
 			padding: 15px 20px;
 			margin-top: 10px;
 			& > p:first-of-type{
@@ -78,12 +78,12 @@ article{
 			border: none;
 		}
 		table{
-			background: $gray04;
-			border: 1px solid $gray03;
+			background: $color-gray04;
+			border: 1px solid $color-gray03;
 			border-spacing: 0;
 			margin-top: 10px;
 			th{
-				background: $gray03;
+				background: $color-gray03;
 				padding: 0 15px;
 			}
 			td{
@@ -99,7 +99,7 @@ article{
 			background: image-url('caption.png') 0 4px no-repeat;
 			display: block;
 			font-size: $meta-size;
-			color: $gray02;
+			color: $color-gray02;
 			padding-left: 25px;
 		}
 		.video-container{

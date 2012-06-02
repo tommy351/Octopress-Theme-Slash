@@ -8,8 +8,8 @@ body{
 	font-family: $default;
 	font-weight: 300;
 	font-size: 14px;
-	background: $background;
-	color: $gray01;
+	background: $color-background;
+	color: $color-gray01;
 	@media screen and (max-width: 1040px){
 		margin: 0 20px;
 	}
@@ -29,7 +29,7 @@ h3{
 a{
 	text-decoration: none;
 	outline-width: 0;
-	color: $main;
+	color: $color-main;
 }
 .left{
 	float: left;
