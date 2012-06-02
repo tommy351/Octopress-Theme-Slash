@@ -14,10 +14,10 @@ header{
 		}
 	}
 	a{
-		color: $gray01;
 		@include transition(0.3s);
+		color: $color-gray01;
 		&:hover{
-			color: $main;
+			color: $color-main;
 		}
 	}
 	h1{
