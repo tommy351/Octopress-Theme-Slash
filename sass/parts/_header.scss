@@ -179,49 +179,49 @@ header{
 				opacity: 1;
 			}
 			&.facebook{
-				background: image-url('facebook.png') center no-repeat #3B5998;
+				background: image-url('social/facebook.png') center no-repeat #3B5998;
 				border: 1px solid #3B5998;
 				&:hover{
 					border: 1px solid darken(#3B5998, 10%);
 				}
 			}
 			&.google{
-				background: image-url('google.png') center no-repeat #C83D20;
+				background: image-url('social/google.png') center no-repeat #C83D20;
 				border: 1px solid #C83D20;
 				&:hover{
 					border: 1px solid darken(#C83D20, 10%);
 				}
 			}
 			&.twitter{
-				background: image-url('twitter.png') center no-repeat #55CFF8;
+				background: image-url('social/twitter.png') center no-repeat #55CFF8;
 				border: 1px solid #55CFF8;
 				&:hover{
 					border: 1px solid darken(#55CFF8, 10%);
 				}
 			}
 			&.github{
-				background: image-url('github.png') center no-repeat rgb(175,182,202);
+				background: image-url('social/github.png') center no-repeat rgb(175,182,202);
 				border: 1px solid rgb(175,182,202);
 				&:hover{
 					border: 1px solid darken(rgb(175,182,202), 10%);
 				}
 			}
 			&.pinterest{
-				background: image-url('pinterest.png') center no-repeat rgb(190,64,55);
+				background: image-url('social/pinterest.png') center no-repeat rgb(190,64,55);
 				border: 1px solid rgb(190,64,55);
 				&:hover{
 					border: 1px solid darken(rgb(190,64,55), 10%);
 				}
 			}
 			&.delicious{
-				background: image-url('delicious.png') center no-repeat rgb(50,113,203);
+				background: image-url('social/delicious.png') center no-repeat rgb(50,113,203);
 				border: 1px solid rgb(50,113,203);
 				&:hover{
 					border: 1px solid darken(rgb(50,113,203), 10%);
 				}
 			}
 			&.rss{
-				background: image-url('rss.png') center no-repeat #EF7522;
+				background: image-url('social/rss.png') center no-repeat #EF7522;
 				border: 1px solid #EF7522;
 				&:hover{
 					border: 1px solid darken(#EF7522, 10%);
