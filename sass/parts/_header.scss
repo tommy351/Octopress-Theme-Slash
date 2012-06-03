@@ -1,8 +1,10 @@
-header{
-	height: 30px;
+$header-height: 30px;
+
+#header{
+	height: $header-height;
 	padding: 30px 0;
-	line-height: 30px;
 	border-bottom: 1px solid $color-gray04;
+	line-height: $header-height;
 	@media screen and (max-width: 1040px){
 		height: auto;
 		position: relative;
@@ -14,25 +16,27 @@ header{
 		}
 	}
 	a{
-		@include transition(0.3s);
 		color: $color-gray01;
+		@include transition(color 0.3s);
 		&:hover{
 			color: $color-main;
 		}
 	}
 	h1{
+		float: left;
 		font-weight: 300;
 		font-size: 30px;
 		@media screen and (max-width: 1040px){
-			float: none !important;
+			float: none;
 		}
 	}
-	nav{
+	.menu{
+		float: left;
 		margin-left: 30px;
 		@media screen and (max-width: 1040px){
+			float: none;
 			margin-left: 0;
 			margin-top: 15px;
-			float: none !important;
 		}
 		>ul{
 			@media screen and (max-width: 600px){
@@ -59,7 +63,6 @@ header{
 					background: image-url('detail.png') right center no-repeat;
 					@media screen and (max-width: 1040px){
 						padding: 18px 30px 18px 0;
-						/* Todo */
 						&:only-child{
 							padding-right: 0;
 						}
@@ -138,6 +141,15 @@ header{
 		}
 	}
 	.search{
+		float: left;
+		margin-top: 1px;
+		@media screen and (max-width: 1040px){
+			float: none;
+			margin-top: 15px;
+		}
+		@media screen and (max-width: 600px){
+			margin-top: 40px;
+		}
 		input[type="text"]{
 			background: image-url('search.png') 10px center no-repeat #f2f2f2;
 			color: $color-gray02;
@@ -147,23 +159,24 @@ header{
 			width: 100px;
 			@include transition(0.3s);
 			@include border-radius(15px);
-			@media screen and (max-width: 600px){
-				width: 60px;
-			}
 			&:focus, &:active{
 				background: image-url('search.png') 10px center no-repeat #fff;
-				width: 150px;
 				border-top: 1px solid $color-gray03;
 				color: $color-gray01;
 				outline: none;
-				@media screen and (max-width: 600px){
-					width: 100px;
-				}
 			}
 		}
 	}
 	.social{
+		float: left;
 		margin-right: 15px;
+		@media screen and (max-width: 1040px){
+			float: none;
+			margin-right: 0;
+			a:last-of-type{
+				margin-right: 0;
+			}
+		}
 		@media screen and (max-width: 600px){
 			display: none;
 		}

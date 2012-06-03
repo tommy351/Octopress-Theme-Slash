@@ -1,11 +1,7 @@
-<h1 class="left"><a href="{{ root_url }}/">{{ site.title }}</a></h1>
-<nav class="menu left">{% include navigation.html %}</nav>
-<div class="right">
-	<form class="search right" action="{{ site.simple_search }}" method="get">
-		<input class="left" type="text" name="q" results="0">
-		<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
-	</form>
-	<div class="social right">
+<h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
+<nav class="menu">{% include navigation.html %}</nav>
+<div class="alignright">
+	<div class="social">
 		{% if site.facebook_user %}
 		<a class="facebook" href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook">Facebook</a>
 		{% endif %}
@@ -28,5 +24,9 @@
 		<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
 		{% endif %}
 	</div>
+	<form class="search" action="{{ site.simple_search }}" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
+	</form>
 </div>
 {% include custom/header.html %}
