@@ -7,7 +7,7 @@
 			var href = this.href,
 				link = href.replace(/https?:\/\/([^\/]+)(.*)/, '$1');
 
-			if (link != host){
+			if (link != '' && link != host && !$(this).hasClass('fancybox')){
 				window.open(href);
 				e.preventDefault();
 			}
@@ -49,19 +49,23 @@
 		});
 	};
 
-	/* caption.js */
-	$('.entry').each(function(i){
-		var _i = i;
-		$(this).find('img').each(function(){
-			var alt = $(this).attr('alt');
+	// Append caption after pictures
+	var appendCaption = function(){
+		$('.entry').each(function(i){
+			var _i = i;
+			$(this).find('img').each(function(){
+				var alt = this.alt;
 
-			if (alt == '' || typeof alt == 'undefined'){
-				$(this).wrap('<a href="'+$(this).attr('src')+'" class="fancybox" rel="gallery'+_i+'" />');
-			} else {
-				$(this).after('<span class="caption">'+alt+'</span>').wrap('<a href="'+$(this).attr('src')+'" class="fancybox" title="'+alt+'" rel="gallery'+_i+'" />');
-			}
+				if (alt != ''){
+					$(this).after('<span class="caption">'+alt+'</span>');
+				}
+
+				$(this).wrap('<a href="'+this.src+'" title="'+alt+'" class="fancybox" rel="gallery'+_i+'" />');
+			});
 		});
-	});
-	$('.fancybox').fancybox();
+	};
+
 	externalLinks(); // Delete or comment this line to disable opening external links in new window
+	navigationMenu(); // Delete or comment this line to disable menu for mobile device
+	appendCaption(); // Delete or comment this line to disable caption
 })(jQuery);
