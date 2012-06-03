@@ -31,13 +31,13 @@ a{
 	outline-width: 0;
 	color: $color-main;
 }
-.left{
+.alignleft{
 	float: left;
 }
-.right{
+.alignright{
 	float: right;
 }
-.clear{
+.clearfix{
 	@include pie-clearfix;
 }
 .inner{
