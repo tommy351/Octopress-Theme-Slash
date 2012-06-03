@@ -26,5 +26,8 @@
 		text-align: center;
 		width: 100%;
 		display: block;
+		@media screen and (max-width: 400px){
+			display: none;
+		}
 	}
 }
