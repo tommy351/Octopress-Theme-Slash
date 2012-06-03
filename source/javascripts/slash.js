@@ -51,7 +51,7 @@
 
 	// Append caption after pictures
 	var appendCaption = function(){
-		$('.entry').each(function(i){
+		$('.entry-content').each(function(i){
 			var _i = i;
 			$(this).find('img').each(function(){
 				var alt = this.alt;
