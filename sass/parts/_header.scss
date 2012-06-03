@@ -154,7 +154,7 @@ $header-height: 30px;
 			background: image-url('search.png') 10px center no-repeat #f2f2f2;
 			color: $color-gray02;
 			border: 1px solid $color-gray04;
-			font: 13px $default;
+			font: 13px $font-default;
 			padding: 6px 15px 6px 35px;
 			width: 100px;
 			@include transition(0.3s);
