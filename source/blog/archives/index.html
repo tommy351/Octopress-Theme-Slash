@@ -4,14 +4,5 @@ title: Blog Archives
 ---
 
 {% for post in site.posts reverse %}
-<section class="archive">
-	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-	{% unless year == this_year %}
-		{% assign year = this_year %}
-		<h1 class="archive-title">{{ year }}</h1>
-	{% endunless %}
-	<article class="archive">
-		{% include archive_post.html %}
-	</article>
-</section>
+	{% include archive_post.html %}
 {% endfor %}

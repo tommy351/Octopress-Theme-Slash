@@ -1,24 +1,15 @@
-section.archive{
+.archives{
 	position: relative;
-	&:first-of-type{
-		border-top: 1px solid $color-gray05;
-		article.archive{
-			border-top: none;
-		}
-		h1.archive-title{
-			border-top: none;
-			&:before{
-				border-top: none;
-			}
-		}
-	}
 	&:last-of-type{
-		border-bottom: 1px solid $color-gray04;
-		article.archive{
-			border-bottom: none;
+		&:before{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 200px;
+			border-top: 1px solid $color-gray04;
 		}
 	}
-	h1.archive-title{
+	.year{
 		line-height: 35px;
 		width: 200px;
 		position: absolute;
@@ -35,21 +26,18 @@ section.archive{
 		@media screen and (max-width: 600px){
 			position: relative;
 			width: 100%;
-			& + article.archive{
-				border-top: none;
-				h1{
-					padding-top: 15px;
-				}
-			}
 		}
 	}
-	article.archive{
+	article{
 		margin-left: 200px;
 		@media screen and (max-width: 600px){
 			margin-left: 0;
-			padding: 15px 0;
+			&:first-of-type{
+				border-top: none;
+				padding-top: 30px;
+			}
 		}
-		h1{
+		.title{
 			margin-bottom: 0;
 		}
 		.meta{
