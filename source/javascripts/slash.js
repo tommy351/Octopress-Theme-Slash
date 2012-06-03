@@ -14,22 +14,40 @@
 		});
 	};
 
+	// Append menu for mobile device
+	var navigationMenu = function(){
+		var appends = '<option>Menu</option>';
 
-	/* navigation.js */
-	var appends = '<option>Menu</option>';
+		var search = function(obj, level){
+			var children = obj.children(),
+				link = children.eq(0),
+				_level = level + 1;
 
-	$('.menu .main > li').each(function(){
-		var link = $(this).children('a');
-		appends += '<option value="'+link.attr('href')+'">'+link.html()+'</option>';
-		$(this).find('li').each(function(){
-			var link = $(this).children('a');
-			appends += '<option value="'+link.attr('href')+'">- '+link.html()+'</option>';
+			appends += '<option value="'+link.attr('href')+'">';
+
+			if (level > 0) appends += '|';
+
+			for (var i=0; i<level; i++){
+				appends += '—';
+			}
+
+			appends += link.text()+'</option>';
+
+			if (children.length > 1){
+				children.eq(1).children('li').each(function(){
+					search($(this), _level);
+				});
+			}
+		};
+
+		$('#header .menu .main').children('li').each(function(){
+			search($(this), 0);
 		});
-	});
 
-	$('nav.menu').append('<select>'+appends+'</select>').on('change', 'select', function(){
-		location.href = $(this).val();
-	});
+		$('#header .menu').append('<select>'+appends+'</select>').on('change', 'select', function(){
+			location.href = $(this).val();
+		});
+	};
 
 	/* caption.js */
 	$('.entry').each(function(i){
