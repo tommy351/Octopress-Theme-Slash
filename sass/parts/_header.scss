@@ -206,6 +206,13 @@ header{
 					border: 1px solid darken(rgb(175,182,202), 10%);
 				}
 			}
+			&.linkedin{
+				background: image-url('linkedin.png') center no-repeat #005A87;
+				border: 1px solid #005A87;
+				&:hover{
+					border: 1px solid darken(#005A87, 10%);
+				}
+			}
 			&.pinterest{
 				background: image-url('pinterest.png') center no-repeat rgb(190,64,55);
 				border: 1px solid rgb(190,64,55);
