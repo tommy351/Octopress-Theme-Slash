@@ -27,9 +27,16 @@ article{
 		}
 		.more-link{
 			display: block;
-			margin-top: 20px;
+			margin-top: 16px;
 			padding-left: 30px;
-			background: image-url('more.png') 0 center no-repeat;
+			position: relative;
+			&:before{
+				content: "\f061";
+				font: 1.3em $font-icon;
+				line-height: 1.6em;
+				position: absolute;
+				left: 0;
+			}
 		}
 		p, blockquote, ul, ol, dl, table, iframe, h1, h2, h3, h4, h5, h6, .video-container{
 			margin-top: 10px;
@@ -96,11 +103,19 @@ article{
 			}
 		}
 		.caption{
-			background: image-url('caption.png') 0 4px no-repeat;
 			display: block;
 			font-size: 0.9em;
 			color: $color-gray02;
 			padding-left: 25px;
+			position: relative;
+			&:before{
+				content: "\f040";
+				color: $color-gray03;
+				font: 1.3em $font-icon;
+				line-height: 1.6em;
+				position: absolute;
+				left: 0;
+			}
 		}
 		.video-container{
 			position: relative;

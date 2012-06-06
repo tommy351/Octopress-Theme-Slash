@@ -23,19 +23,21 @@
 		}
 		.date, .tags, .comments{
 			padding-left: 30px;
+			position: relative;
+			&:before{
+				color: $color-gray03;
+				font: 1.3em $font-icon;
+				line-height: 1.6em;
+				position: absolute;
+				left: 0;
+			}
 			@media screen and (max-width: 800px){
 				@include inline-block;
 				margin-right: 30px;
 			}
 		}
-		.date{
-			background: image-url('date.png') 0 center no-repeat;
-		}
-		.tags{
-			background: image-url('tags.png') 0 center no-repeat;
-		}
-		.comments{
-			background: image-url('comments.png') 0 center no-repeat;
-		}
+		.date:before{content: "\f073";}
+		.tags:before{content: "\f02c";}
+		.comments:before{content: "\f075";}
 	}
 }
