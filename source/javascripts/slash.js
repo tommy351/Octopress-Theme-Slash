@@ -14,41 +14,6 @@
 		});
 	};
 
-	// Append menu for mobile device
-	var navigationMenu = function(){
-		var appends = '<option>Menu</option>';
-
-		var search = function(obj, level){
-			var children = obj.children(),
-				link = children.eq(0),
-				_level = level + 1;
-
-			appends += '<option value="'+link.attr('href')+'">';
-
-			if (level > 0) appends += '|';
-
-			for (var i=0; i<level; i++){
-				appends += '—';
-			}
-
-			appends += link.text()+'</option>';
-
-			if (children.length > 1){
-				children.eq(1).children('li').each(function(){
-					search($(this), _level);
-				});
-			}
-		};
-
-		$('#header .menu .main').children('li').each(function(){
-			search($(this), 0);
-		});
-
-		$('#header .menu').append('<select>'+appends+'</select>').on('change', 'select', function(){
-			location.href = $(this).val();
-		});
-	};
-
 	// Append caption after pictures
 	var appendCaption = function(){
 		$('.entry-content').each(function(i){
@@ -66,6 +31,22 @@
 	};
 
 	externalLinks(); // Delete or comment this line to disable opening external links in new window
-	navigationMenu(); // Delete or comment this line to disable menu for mobile device
 	appendCaption(); // Delete or comment this line to disable caption
+
+	var mobilenav = $('#mobile-nav');
+	mobilenav.on('click', '.menu .button', function(){
+		if (!$(this).hasClass('on')){
+			var width = $(this).width() + 42;
+			$(this).addClass('on').next().show().css({width: width});
+		} else {
+			$(this).removeClass('on').next().hide();
+		}
+	}).on('click', '.search .button', function(){
+		if (!$(this).hasClass('on')){
+			var width = mobilenav.width() - 51;
+			$(this).addClass('on').next().show().css({width: width}).children().children().eq(0).focus();
+		} else {
+			$(this).removeClass('on').next().hide().children().children().eq(0).val('');
+		}
+	});
 })(jQuery);

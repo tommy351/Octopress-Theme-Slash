@@ -1,6 +1,21 @@
 <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
-<nav class="menu">{% include navigation.html %}</nav>
-<div class="alignright">
+<nav id="main-nav">{% include navigation.html %}</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container">{% include navigation.html %}</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="{{ site.simple_search }}" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
 	<div class="social">
 		{% if site.facebook_user %}
 		<a class="facebook" href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook">Facebook</a>
@@ -28,5 +43,5 @@
 		<input class="alignright" type="text" name="q" results="0">
 		<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
 	</form>
-</div>
+</nav>
 {% include custom/header.html %}
