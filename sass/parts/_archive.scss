@@ -14,7 +14,7 @@
 		width: 200px;
 		position: absolute;
 		top: 0;
-		padding-top: 30px;
+		padding-top: 15px;
 		border-top: 1px solid #fff;
 		&:before{
 			content: "";
@@ -30,6 +30,7 @@
 	}
 	article{
 		margin-left: 200px;
+		padding: 15px 0;
 		@media screen and (max-width: 600px){
 			margin-left: 0;
 			&:first-of-type{
@@ -42,6 +43,7 @@
 		}
 		.meta{
 			color: $color-gray02;
+			font-size: 0.9em;
 			line-height: 2;
 			margin-top: 15px;
 			@media screen and (max-width: 600px){
