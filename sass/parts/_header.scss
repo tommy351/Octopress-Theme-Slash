@@ -54,18 +54,21 @@ $header-height: 30px;
 				}
 			}
 			>a{
-				padding: 38px 30px 38px 0;
+				padding: 38px 0;
 				margin-top: -38px;
-				background: image-url('detail.png') right center no-repeat;
-				@media screen and (max-width: 1040px){
-					padding: 18px 30px 18px 0;
-					&:only-child{
-						padding-right: 0;
-					}
+				&:after{
+					content: "\f078";
+					color: $color-gray03;
+					font: 12px $font-icon;
+					padding-left: 10px;
 				}
 				&:only-child{
-					padding-right: 0;
-					background: none;
+					&:after{
+						content: "";
+					}
+				}
+				@media screen and (max-width: 1040px){
+					padding: 18px 0;
 				}
 			}
 		}
@@ -102,15 +105,21 @@ $header-height: 30px;
 					border-bottom: none;
 				}
 				>a{
-					background: image-url('detail-sub.png') right center no-repeat;
 					display: block;
-					padding: 5px 30px 5px 15px;
+					padding: 5px 15px;
+					&:after{
+						content: "\f054";
+						color: $color-gray02;
+						font: 12px $font-icon;
+						padding-left: 10px;
+					}
 					&:hover{
 						color: $color-gray01;
 					}
 					&:only-child{
-						background: none;
-						padding-right: 15px;
+						&:after{
+							content: "";
+						}
 					}
 				}
 			}
@@ -256,12 +265,22 @@ $header-height: 30px;
 	.search{
 		float: left;
 		margin-top: 1px;
+		position: relative;
 		@media screen and (max-width: 1040px){
 			float: none;
 			margin-top: 15px;
 		}
+		&:before{
+			content: "\f002";
+			color: $color-gray03;
+			font: 18px $font-icon;
+			line-height: 30px;
+			position: absolute;
+			top: 0;
+			right: 125px;
+		}
 		input[type="text"]{
-			background: image-url('search.png') 10px center no-repeat #f2f2f2;
+			background: #f2f2f2;
 			color: $color-gray02;
 			border: 1px solid $color-gray04;
 			font: 13px $font-default;
@@ -270,7 +289,7 @@ $header-height: 30px;
 			@include transition(0.3s);
 			@include border-radius(15px);
 			&:focus, &:active{
-				background: image-url('search.png') 10px center no-repeat #fff;
+				background: #fff;
 				border-top: 1px solid $color-gray03;
 				color: $color-gray01;
 				outline: none;
