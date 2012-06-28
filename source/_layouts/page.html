@@ -6,7 +6,7 @@ layout: default
     {% if page.title %}
     <h1 class="title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
-    <div class="entry">{{ content }}</div>
+    <div class="entry-content">{{ content }}</div>
 </article>
 {% unless page.footer == false %}
     {% include post/sharing.html %}
