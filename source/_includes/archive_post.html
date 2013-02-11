@@ -10,10 +10,10 @@
 <article>
 	<h2 class="title"><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h2>
 	<div class="meta">
-		<span class="date">{{ date | date: "%b %e" }}</span>
-		<span class="tags">{% include post/categories.html %}</span>
+		<div class="date">{{ date | date: "%b %e" }}</div>
+		<div class="tags">{% include post/categories.html %}</div>
 	    {% if site.disqus_short_name and post.comments == true and site.disqus_show_comment_count == true %}
-	    <span class="comments"><a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></span>
+	    <div class="comments"><a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></div>
 	    {% endif %}
 	</div>
 </article>
