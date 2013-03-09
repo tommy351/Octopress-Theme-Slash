@@ -42,27 +42,30 @@
 			margin-bottom: 0;
 		}
 		.meta{
-			color: $color-gray02;
-			font-size: 0.9em;
 			line-height: 2;
+			font-size: 0.9em;
+			color: $color-gray02;
 			margin-top: 15px;
 			@media screen and (max-width: 600px){
 				display: none;
 			}
-			span{
-				margin-right: 30px;
-				@include inline-block;
+			a{
+				@include link-colors($color-gray02, $color-gray01);
+				@include transition(0.3s);
+			}
+			.date, .tags, .comments{
+				padding-left: 30px;
+				position: relative;
 				&:before{
 					color: $color-gray03;
 					font: 1.3em $font-icon;
-					padding-right: 10px;
+					line-height: 1.6em;
+					position: absolute;
+					left: 0;
 				}
-			}
-			a{
-				color: $color-gray02;
-				@include transition(0.3s);
-				&:hover{
-					color: $color-gray01;
+				@media screen and (max-width: 600px){
+					@include inline-block;
+					margin-right: 30px;
 				}
 			}
 			.date:before{content: "\f073";}
