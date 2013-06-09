@@ -375,7 +375,7 @@ $header-height: 30px;
 				&:hover{
 					border: 1px solid darken(rgb(190,64,55), 10%);
 				}
-			}
+      }
 			&.delicious{
 				background: image-url('social/delicious.png') center no-repeat rgb(50,113,203);
 				border: 1px solid rgb(50,113,203);
@@ -384,10 +384,17 @@ $header-height: 30px;
 				}
 			}
 			&.rss{
-				background: image-url('social/rss.png') center no-repeat #EF7522;
-				border: 1px solid #EF7522;
+				background: image-url('social/rss.png') center no-repeat #ef7522;
+				border: 1px solid #ef7522;
 				&:hover{
-					border: 1px solid darken(#EF7522, 10%);
+					border: 1px solid darken(#ef7522, 10%);
+				}
+			}
+      &.instagram{
+				background: image-url('social/instagram.png') center no-repeat rgb(64,110,149);
+				border: 1px solid rgb(64,110,149);
+				&:hover{
+					border: 1px solid darken(rgb(64,110,149), 10%);
 				}
 			}
 		}

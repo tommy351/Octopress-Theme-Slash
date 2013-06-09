@@ -47,6 +47,9 @@
 		{% if site.subscribe_rss %}
 		<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
 		{% endif %}
+    {% if site.instagram_user %}
+    <a class="instagram" href="http://instagram.com/{{ site.instagram_user }}" title="Instagram">Instagram</a>
+		{% endif %}
 	</div>
 	<form class="search" action="{{ site.simple_search }}" method="get">
 		<input class="alignright" type="text" name="q" results="0">
